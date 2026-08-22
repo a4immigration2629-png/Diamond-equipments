@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Diamond Equipments — cricket bats, helmets, gloves, pads, balls, kit bags and cricket accessories.">
+<title>Diamond Equipments | Cricket Equipment</title>
+<style>
+:root{
+  --bg:#030303; --panel:#0b0b0b; --panel2:#11100d;
+  --gold:#d8a331; --gold2:#ffd66b; --gold3:#9c6b14;
+  --white:#f8f5ec; --muted:#a8a39a; --green:#16c784;
+  --border:rgba(216,163,49,.28);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:
+  radial-gradient(circle at 50% -5%,rgba(216,163,49,.20),transparent 34%),
+  radial-gradient(circle at 100% 50%,rgba(216,163,49,.06),transparent 28%),
+  var(--bg);
+  color:var(--white);font-family:Inter,Arial,sans-serif;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.wrap{width:min(1050px,92%);margin:auto}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(3,3,3,.92);backdrop-filter:blur(15px);border-bottom:1px solid var(--border)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:.8px}
+.logo-mark{
+  width:36px;height:36px;border:2px solid var(--gold2);transform:rotate(45deg);
+  display:grid;place-items:center;box-shadow:0 0 22px rgba(216,163,49,.25)
+}
+.logo-mark span{transform:rotate(-45deg);font-size:16px}
+.logo small{display:block;font-size:9px;letter-spacing:2.2px;color:var(--gold2);margin-top:2px}
+nav{display:flex;gap:23px;font-size:13px;color:#d5d0c5}
+nav a:hover{color:var(--gold2)}
+.menu{display:none;background:#0c0c0c;border:1px solid var(--border);color:var(--gold2);border-radius:10px;padding:8px 11px}
+
+/* Hero */
+.hero{padding:45px 0 25px;text-align:center}
+.badge{
+ display:inline-block;padding:8px 13px;border:1px solid var(--border);border-radius:999px;
+ color:var(--gold2);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;
+ background:rgba(216,163,49,.06)
+}
+h1{
+ font-size:clamp(42px,10vw,78px);line-height:.95;margin:18px 0 13px;letter-spacing:-2px;
+ background:linear-gradient(135deg,#fff8df 10%,#ffd66b 48%,#9d6810 100%);
+ -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.hero h2{font-size:clamp(18px,4vw,28px);margin:0;color:#fff}
+.hero p{max-width:650px;margin:14px auto;color:var(--muted);line-height:1.65;font-size:15px}
+.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{
+ display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:12px;
+ border:1px solid var(--gold);font-weight:850;font-size:13px;transition:.2s;cursor:pointer
+}
+.btn.gold{color:#080704;background:linear-gradient(135deg,#ffdb78,#b87915);box-shadow:0 8px 25px rgba(216,163,49,.18)}
+.btn.dark{color:var(--gold2);background:#090909}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+
+/* Ad-style hero card */
+.ad-card{
+ margin:27px auto 22px;max-width:720px;border:1px solid var(--border);border-radius:25px;overflow:hidden;
+ background:linear-gradient(145deg,#11100d,#050505);box-shadow:0 22px 70px rgba(0,0,0,.6),0 0 40px rgba(216,163,49,.07)
+}
+.ad-art{
+ min-height:260px;padding:26px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+ background:
+ radial-gradient(circle at 50% 40%,rgba(255,214,107,.13),transparent 25%),
+ linear-gradient(145deg,#16120a,#030303)
+}
+.ad-diamond{font-size:55px;color:var(--gold2);filter:drop-shadow(0 0 15px rgba(255,214,107,.25))}
+.ad-art h3{font-size:34px;margin:10px 0 4px;letter-spacing:2px}
+.ad-art p{color:#d4a941;margin:0;font-weight:900;letter-spacing:3px}
+.ad-strip{background:#f5f1e7;color:#16130d;padding:15px;font-weight:900;font-size:18px}
+.ad-strip span{color:#a71d12}
+.ad-cta{background:linear-gradient(135deg,#b87a17,#f1c34d);color:#0a0804;font-weight:950;padding:15px;font-size:16px}
+
+/* Trust */
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 58px}
+.trust-item{border:1px solid var(--border);border-radius:15px;padding:16px 10px;text-align:center;background:rgba(255,255,255,.025)}
+.trust-item b{display:block;color:var(--gold2);font-size:19px;margin-bottom:5px}
+.trust-item span{color:#9f9b92;font-size:11px}
+
+/* Sections */
+section{padding:48px 0}
+.head{text-align:center;margin-bottom:27px}
+.kicker{color:var(--gold2);font-size:10px;letter-spacing:3px;text-transform:uppercase}
+h2{font-size:clamp(27px,6vw,43px);margin:7px 0 9px}
+.head p{max-width:650px;margin:auto;color:#999;line-height:1.6;font-size:14px}
+
+/* Categories */
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.category{
+ border:1px solid var(--border);border-radius:19px;padding:20px 13px;text-align:center;
+ background:linear-gradient(145deg,rgba(216,163,49,.08),rgba(255,255,255,.02));
+ transition:.2s
+}
+.category:hover{transform:translateY(-4px);border-color:rgba(255,214,107,.65)}
+.cat-img{height:90px;display:grid;place-items:center;margin-bottom:9px}
+.cat-img svg{width:90px;height:90px;filter:drop-shadow(0 8px 12px rgba(0,0,0,.6))}
+.category h3{margin:6px 0;color:#f5e7bd;font-size:16px}
+.category p{margin:0;color:#8f8b83;font-size:11px;line-height:1.5}
+
+/* Products */
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.product{
+ border:1px solid var(--border);border-radius:18px;overflow:hidden;background:var(--panel)
+}
+.product-img{
+ height:190px;display:grid;place-items:center;background:
+ radial-gradient(circle,rgba(216,163,49,.13),transparent 55%),#080808
+}
+.product-img svg{width:150px;height:150px;filter:drop-shadow(0 10px 15px rgba(0,0,0,.7))}
+.product-info{padding:16px}
+.tag{font-size:9px;color:#090704;background:var(--gold2);border-radius:99px;padding:5px 8px;font-weight:900}
+.product h3{font-size:17px;margin:12px 0 6px}
+.product p{font-size:12px;color:#929088;line-height:1.5;min-height:36px}
+.price{color:var(--gold2);font-size:20px;font-weight:950;margin:10px 0 13px}
+
+/* Why */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.panel{border:1px solid var(--border);border-radius:21px;padding:25px;background:linear-gradient(145deg,rgba(216,163,49,.08),rgba(255,255,255,.015))}
+.panel h3{font-size:24px;margin:5px 0 12px}
+.panel p,.panel li{color:#a29d94;line-height:1.7;font-size:13px}
+.panel ul{padding-left:19px}
+
+/* Contact */
+.contact{
+ text-align:center;border:1px solid var(--border);border-radius:24px;padding:37px 18px;
+ background:radial-gradient(circle at center,rgba(216,163,49,.12),transparent 65%)
+}
+.phone{font-size:22px;color:var(--gold2);font-weight:950;margin:14px 0 18px}
+
+/* Footer */
+footer{border-top:1px solid var(--border);padding:35px 0 100px;color:#918c83}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:25px}
+footer h3{color:#eee;margin:0 0 13px}
+footer p,footer a{font-size:12px;line-height:1.7}
+footer a{display:block;margin:8px 0}
+footer a:hover{color:var(--gold2)}
+.copy{text-align:center;border-top:1px solid rgba(255,255,255,.07);padding-top:18px;margin-top:25px;font-size:11px}
+
+/* Floating WhatsApp */
+.whatsapp{
+ position:fixed;right:15px;bottom:15px;z-index:60;background:linear-gradient(135deg,#16c784,#078c4d);
+ color:white;border-radius:999px;padding:14px 20px;font-weight:950;box-shadow:0 10px 35px rgba(0,0,0,.55)
+}
+
+/* Legal modal */
+.modal{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.82);padding:20px;align-items:center;justify-content:center}
+.modal.show{display:flex}
+.modal-box{width:min(720px,100%);max-height:86vh;overflow:auto;background:#0b0b0a;border:1px solid var(--border);border-radius:20px;padding:27px;position:relative}
+.modal-box h2{color:var(--gold2)}
+.modal-box h3{color:#eee}
+.modal-box p,.modal-box li{color:#a9a49a;line-height:1.7;font-size:13px}
+.close{position:absolute;right:13px;top:8px;border:0;background:none;color:#fff;font-size:29px;cursor:pointer}
+
+/* Mobile */
+@media(max-width:800px){
+ nav{display:none}
+ .menu{display:block}
+ nav.open{display:flex;position:absolute;top:68px;left:0;right:0;padding:16px 5%;background:#050505;flex-direction:column;border-bottom:1px solid var(--border)}
+ .trust{grid-template-columns:repeat(2,1fr)}
+ .categories{grid-template-columns:repeat(2,1fr)}
+ .products{grid-template-columns:repeat(2,1fr)}
+ .why{grid-template-columns:1fr}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:500px){
+ .hero{padding-top:34px}
+ .ad-art{min-height:225px}
+ .ad-art h3{font-size:28px}
+ .ad-strip{font-size:15px}
+ .categories{gap:9px}
+ .category{padding:15px 8px}
+ .cat-img{height:78px}
+ .cat-img svg{width:75px;height:75px}
+ .products{gap:9px}
+ .product-img{height:155px}
+ .product-img svg{width:120px;height:120px}
+ .product-info{padding:12px}
+ .product h3{font-size:14px}
+ .price{font-size:17px}
+ .footer-grid{grid-template-columns:1fr}
+ .whatsapp{left:15px;right:15px;text-align:center}
+}
+
+/* FINAL MOBILE STORE SETTINGS */
+.whatsapp{position:fixed;right:15px!important;left:auto!important;bottom:78px!important;width:68px;height:68px;padding:0!important;border:2px solid #070707;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#25d366,#079447);font-size:32px;box-shadow:0 8px 30px rgba(37,211,102,.45);z-index:80}
+#contact .btn,.panel .btn{min-height:58px;font-size:16px;font-weight:950}
+@media(max-width:800px){.products{grid-template-columns:repeat(2,1fr)!important;gap:12px!important}.product{min-height:300px}.product-img{height:165px!important}.product-info .btn{width:100%;padding:10px 7px;font-size:11px}.product-info{padding:12px}.section{padding-top:60px;padding-bottom:60px}}
+@media(max-width:500px){.products{grid-template-columns:repeat(2,1fr)!important;gap:12px!important}.product{min-height:290px}.product-img{height:155px!important}.whatsapp{right:14px!important;bottom:78px!important}}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap nav">
+  <a class="logo" href="#home">
+    <div class="logo-mark"><span>◆</span></div>
+    <div>DIAMOND EQUIPMENTS<small>CRICKET • GEAR • PERFORMANCE</small></div>
+  </a>
+  <button class="menu" onclick="toggleMenu()">☰</button>
+  <nav id="nav">
+    <a href="#home">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+</header>
+
+<main id="home">
+<section class="hero wrap">
+  <span class="badge">Premium Cricket Equipment Store</span>
+  <h1>Diamond Equipments</h1>
+  <h2>MAKE YOUR GAME SHARPER.</h2>
+  <p>Premium cricket bats, gloves, helmets, pads, balls, kit bags and accessories — built for players who take the game seriously.</p>
+  <div class="actions">
+    <a class="btn gold" href="#products">Shop Equipment</a>
+    <a class="btn dark" href="#contact">WhatsApp Us</a>
+  </div>
+
+  <div class="ad-card">
+    <div class="ad-art">
+      <div class="ad-diamond">◇</div>
+      <h3>DIAMOND</h3>
+      <p>CRICKET EQUIPMENTS</p>
+    </div>
+    <div class="ad-strip">PREMIUM GEAR <span>•</span> PLAYER READY</div>
+    <div class="ad-cta">SHOP CRICKET EQUIPMENT NOW!</div>
+  </div>
+</section>
+
+<div class="wrap trust">
+  <div class="trust-item"><b>✓</b><span>Quality Equipment</span></div>
+  <div class="trust-item"><b>24×7</b><span>Customer Service</span></div>
+  <div class="trust-item"><b>⚡</b><span>Fast Service</span></div>
+  <div class="trust-item"><b>◆</b><span>Trusted Store</span></div>
+</div>
+
+<section id="categories">
+<div class="wrap">
+  <div class="head">
+    <div class="kicker">Shop by Category</div>
+    <h2>Cricket Essentials</h2>
+    <p>Everything you need to build your cricket kit, from bats and balls to protective equipment and bags.</p>
+  </div>
+
+  <div class="categories">
+    <div class="category">
+      <div class="cat-img">
+        <svg viewBox="0 0 100 100"><path d="M40 12l18 6-4 12-10-3-22 61c-2 6-11 4-9-2l22-61-8-3z" fill="#c98d25"/><path d="M48 15l10 3-4 12-10-3z" fill="#f4ca61"/><path d="M24 80l13-36 8 3-13 36z" fill="#f5e3b0"/></svg>
+      </div>
+      <h3>Cricket Bats</h3><p>English Willow • Kashmir Willow • Tennis</p>
+    </div>
+    <div class="category">
+      <div class="cat-img">
+        <svg viewBox="0 0 100 100"><path d="M22 58V35c0-22 15-30 28-30s28 8 28 30v23H65V37c0-10-5-17-15-17S35 27 35 37v21z" fill="#d6a63c"/><path d="M31 48h38v8H31z" fill="#f4d47a"/><path d="M70 30h13v5H70z" fill="#e9e4d7"/></svg>
+      </div>
+      <h3>Helmets</h3><p>Protection • Comfort • Adjustable Fit</p>
+    </div>
+    <div class="category">
+      <div class="cat-img">
+        <svg viewBox="0 0 100 100"><path d="M25 18c-5 7-5 19-1 29l9 25c2 6 10 7 13 2l4-8 5 8c3 5 11 4 13-2l9-25c4-10 4-22-1-29l-15 8-11 10-11-10z" fill="#e0b44f"/><path d="M31 25l8 7-5 8-8-5zM69 25l-8 7 5 8 8-5z" fill="#f5e3b0"/></svg>
+      </div>
+      <h3>Batting Gloves</h3><p>Grip • Padding • Match Ready</p>
+    </div>
+    <div class="category">
+      <div class="cat-img">
+        <svg viewBox="0 0 100 100"><path d="M22 15h22l6 65-19 8-9-60zM56 15h22l-1 73-20-8z" fill="#d6a63c"/><path d="M27 22h14M61 22h14" stroke="#fff0bd" stroke-width="4"/></svg>
+      </div>
+      <h3>Batting Pads</h3><p>Lightweight • Protective • Secure</p>
+    </div>
+    <div class="category">
+      <div class="cat-img">
+        <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" fill="#bd2630"/><path d="M27 36c12 10 25 13 46 9M25 57c17-4 34-3 51 6" fill="none" stroke="#f1d1c0" stroke-width="3"/></svg>
+      </div>
+      <h3>Cricket Balls</h3><p>Leather • Practice • Match Balls</p>
+    </div>
+    <div class="category">
+      <div class="cat-img">
+        <svg viewBox="0 0 100 100"><path d="M25 22h50v58H25z" fill="#c89125"/><path d="M32 29h36v42H32z" fill="#17120a"/><path d="M36 38h28v5H36zM36 49h22v5H36z" fill="#e5c76e"/><path d="M39 18c0-10 22-10 22 0" fill="none" stroke="#d9b455" stroke-width="5"/></svg>
+      </div>
+      <h3>Kit Bags</h3><p>Wheelie • Duffle • Full Kit Storage</p>
+    </div>
+    <div class="category">
+      <div class="cat-img">
+        <svg viewBox="0 0 100 100"><path d="M20 75h60v8H20zM30 25h8v50h-8zM62 25h8v50h-8zM38 35h24v6H38zM38 55h24v6H38z" fill="#d5a23b"/></svg>
+      </div>
+      <h3>Stumps & Accessories</h3><p>Stumps • Grips • Guards • Training</p>
+    </div>
+    <div class="category">
+      <div class="cat-img">
+        <svg viewBox="0 0 100 100"><path d="M27 68l8-42h30l8 42z" fill="#d4a13a"/><path d="M35 26h30l-5-9H40z" fill="#f4d377"/><path d="M35 52h30" stroke="#17120a" stroke-width="5"/></svg>
+      </div>
+      <h3>Cricket Shoes</h3><p>Grip • Comfort • Match Performance</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="products">
+<div class="wrap">
+  <div class="head">
+    <div class="kicker">Featured Gear</div>
+    <h2>Popular Equipment</h2>
+    <p>Explore premium cricket equipment. Contact us for current availability and pricing.</p>
+  </div>
+
+  <div class="products">
+    <article class="product">
+      <div class="product-img">
+        <svg viewBox="0 0 180 180"><path d="M76 16l32 9-8 25-17-5-37 105c-4 12-21 8-17-4L66 41l-14-4z" fill="#c58b20"/><path d="M85 21l23 6-8 25-23-6z" fill="#ffe083"/><path d="M40 140l14-39 15 5-14 40z" fill="#fff0bc"/></svg>
+      </div>
+      <div class="product-info"><span class="tag">BESTSELLER</span><h3>Diamond Pro Cricket Bat</h3><p>Premium-style match bat with balanced profile.</p><a class="btn gold" href="#contact">Enquire Now</a></div>
+    </article>
+
+    <article class="product">
+      <div class="product-img">
+        <svg viewBox="0 0 180 180"><path d="M43 111V64c0-35 24-48 47-48s47 13 47 48v47h-23V67c0-17-8-28-24-28S66 50 66 67v44z" fill="#d8a53c"/><path d="M60 91h74v13H60z" fill="#f5d46e"/><path d="M134 53h30v9h-30z" fill="#e9e5d9"/></svg>
+      </div>
+      <div class="product-info"><span class="tag">PROTECTION</span><h3>Diamond Cricket Helmet</h3><p>Protective cricket helmet concept with adjustable fit.</p><a class="btn gold" href="#contact">Enquire Now</a></div>
+    </article>
+
+    <article class="product">
+      <div class="product-img">
+        <svg viewBox="0 0 180 180"><path d="M45 31c-11 14-11 31-4 50l15 40c4 10 17 12 23 2l8-14 8 14c6 10 19 8 23-2l15-40c7-19 7-36-4-50l-24 13-18 17-18-17z" fill="#d8a53c"/><path d="M55 44l14 12-9 13-13-8zM125 44l-14 12 9 13 13-8z" fill="#f5e3af"/></svg>
+      </div>
+      <div class="product-info"><span class="tag">NEW</span><h3>Diamond Batting Gloves</h3><p>Comfortable padded gloves designed for confident grip.</p><a class="btn gold" href="#contact">Enquire Now</a></div>
+    </article>
+
+    <article class="product">
+      <div class="product-img">
+        <svg viewBox="0 0 180 180"><path d="M38 24h43l9 130-38 14-14-120zM98 24h43l-2 144-39-14z" fill="#d8a53c"/><path d="M49 38h28M109 38h28" stroke="#fff0bc" stroke-width="7"/></svg>
+      </div>
+      <div class="product-info"><span class="tag">POPULAR</span><h3>Diamond Batting Pads</h3><p>Lightweight protective leg guards for match play.</p><a class="btn gold" href="#contact">Enquire Now</a></div>
+    </article>
+
+    <article class="product">
+      <div class="product-img">
+        <svg viewBox="0 0 180 180"><circle cx="90" cy="90" r="55" fill="#b92731"/><path d="M48 65c22 19 48 25 86 17M45 102c30-8 60-5 92 11" fill="none" stroke="#f1d1c0" stroke-width="6"/></svg>
+      </div>
+      <div class="product-info"><span class="tag">MATCH</span><h3>Leather Cricket Ball</h3><p>Match and practice ball options available.</p><a class="btn gold" href="#contact">Enquire Now</a></div>
+    </article>
+
+    <article class="product">
+      <div class="product-img">
+        <svg viewBox="0 0 180 180"><path d="M43 34h94v110H43z" fill="#c89125"/><path d="M55 47h70v78H55z" fill="#17120a"/><path d="M63 62h54v8H63zM63 79h43v8H63z" fill="#e5c76e"/><path d="M70 27c0-17 40-17 40 0" fill="none" stroke="#d9b455" stroke-width="8"/></svg>
+      </div>
+      <div class="product-info"><span class="tag">FULL KIT</span><h3>Diamond Cricket Kit Bag</h3><p>Spacious bag for bats, pads, gloves, shoes and accessories.</p><a class="btn gold" href="#contact">Enquire Now</a></div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="about">
+<div class="wrap why">
+  <div class="panel">
+    <div class="kicker">Why Diamond</div>
+    <h3>Gear up. Step in. Play.</h3>
+    <p>Diamond Equipments is designed as a dedicated cricket-equipment store where players can discover essential gear in one place.</p>
+    <ul>
+      <li>Cricket bats and balls</li>
+      <li>Batting gloves and pads</li>
+      <li>Helmets and protective gear</li>
+      <li>Kit bags and accessories</li>
+      <li>Equipment for practice and match days</li>
+    </ul>
+  </div>
+  <div class="panel">
+    <div class="kicker">Customer Service</div>
+    <h3>Need help choosing your kit?</h3>
+    <p>Contact us for product availability, sizes, pricing, bulk requirements and order assistance.</p>
+    <a class="btn gold" href="https://wa.me/917014435218" target="_blank" rel="noopener">💬 CHAT NOW ON WHATSAPP</a>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+  <div class="contact">
+    <div class="kicker">Contact Diamond Equipments</div>
+    <h2>Ready for your next match?</h2>
+    <p>Talk to us about cricket equipment, availability and orders.</p>
+    
+    <a class="btn gold" href="https://wa.me/917014435218" target="_blank" rel="noopener">💬 CHAT NOW ON WHATSAPP</a>
+  </div>
+</div>
+</section>
+</main>
+
+<a class="whatsapp" href="https://wa.me/917014435218" target="_blank" rel="noopener">◔</a>
+
+<footer>
+<div class="wrap footer-grid">
+  <div>
+    <h3>◆ Diamond Equipments</h3>
+    <p>Premium cricket equipment for players, clubs and cricket lovers.</p>
+  </div>
+  <div>
+    <h3>Quick Links</h3>
+    <a href="#home">Home</a><a href="#categories">Categories</a><a href="#products">Products</a><a href="#contact">Contact</a>
+  </div>
+  <div>
+    <h3>Legal</h3>
+    <a href="#" onclick="openModal('terms');return false">Terms & Conditions</a>
+    <a href="#" onclick="openModal('privacy');return false">Privacy Policy</a>
+    <a href="#" onclick="openModal('refund');return false">Shipping & Refund Policy</a>
+  </div>
+</div>
+<div class="wrap copy">© 2026 Diamond Equipments. All rights reserved. <br>*</div>
+</footer>
+
+<div class="modal" id="modal">
+<div class="modal-box">
+<button class="close" onclick="closeModal()">×</button>
+<div id="modalContent"></div>
+</div>
+</div>
+
+<script>
+function toggleMenu(){document.getElementById('nav').classList.toggle('open')}
+const legal={
+terms:`<h2>Terms & Conditions</h2>
+<h3>1. General</h3><p>By using Diamond Equipments, you agree to use this website lawfully and responsibly.</p>
+<h3>2. Products</h3><p>Product descriptions, images, specifications, availability and prices may change without prior notice. Final product details should be confirmed before purchase.</p>
+<h3>3. Orders</h3><p>An order is subject to product availability and confirmation. We may contact you to verify order details before dispatch.</p>
+<h3>4. Payments</h3><p>Payments must be completed through the payment methods made available by Diamond Equipments.</p>
+<h3>5. Product Use</h3><p>Customers are responsible for selecting the correct size and equipment for their playing requirements.</p>`,
+privacy:`<h2>Privacy Policy</h2>
+<h3>Information We Collect</h3><p>We may collect information you provide, including your name, phone number, delivery details and order information.</p>
+<h3>How We Use Information</h3><p>Information may be used to process orders, provide customer support, communicate about enquiries and improve our services.</p>
+<h3>Data Protection</h3><p>We take reasonable measures to protect information handled through the website. Do not submit unnecessary sensitive information.</p>
+<h3>Contact</h3><p>For privacy questions, contact Diamond Equipments using the contact information shown on this website.</p>`,
+refund:`<h2>Shipping & Refund Policy</h2>
+<h3>Shipping</h3><p>Delivery timelines depend on product availability and destination. Customers should verify delivery details before placing an order.</p>
+<h3>Returns</h3><p>Return eligibility may depend on the product condition and reason for return. Products should be unused and in their original condition where applicable.</p>
+<h3>Damaged or Incorrect Items</h3><p>Please contact customer support as soon as possible if an item arrives damaged or is different from the confirmed order.</p>
+<h3>Refunds</h3><p>Approved refunds are processed according to the applicable payment method and the final return decision.</p>
+<p><strong>Important:</strong> Replace this sample policy with your final business policy before publishing.</p>`
+};
+function openModal(type){document.getElementById('modalContent').innerHTML=legal[type];document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()})
+</script>
+</body>
+</html>
